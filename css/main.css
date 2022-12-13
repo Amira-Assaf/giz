@@ -2586,7 +2586,7 @@ body.mobile-nav-active #mobile-nav-toggle {
         margin-bottom: 30px
     }
     .single-feature .title {
-        background: #d33837
+        background: rgba(35, 97, 78, 0.8);
     }
 }
 
