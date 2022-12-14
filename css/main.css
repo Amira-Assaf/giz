@@ -1,3 +1,11 @@
+@font-face {
+    font-family: Cairo;
+    src: url(../fonts/Cairo-Regular.ttf);
+  }
+  @font-face {
+    font-family: Cairo-Bold;
+    src: url(../fonts/Cairo-Bold.ttf);
+  }
 ::-moz-selection {
     background-color: #d33837;
     color: #fff
@@ -37,7 +45,7 @@
 
 body {
     color: #777;
-    font-family: "Poppins", sans-serif;
+    font-family: Cairo;
     font-size: 14px;
     font-weight: 300;
     line-height: 1.625em;
@@ -74,7 +82,8 @@ a,
 a:focus,
 a:hover {
     text-decoration: none;
-    outline: 0
+    outline: 0;
+    cursor:pointer !important;
 }
 
 .btn.active.focus,
@@ -111,7 +120,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Poppins", sans-serif;
+    font-family: Cairo;
     color: #222;
     line-height: 1.2em !important;
     margin-bottom: 0;
@@ -127,7 +136,7 @@ h6 {
 .h6 {
     margin-bottom: 0;
     margin-top: 0;
-    font-family: "Poppins", sans-serif;
+    font-family: Cairo;
     font-weight: 600;
     color: #222
 }
@@ -2001,7 +2010,7 @@ h6 {
 
 .header-top {
     background: #04091e;
-    font-size: 12px;
+    font-size: 15px;
     padding: 8px
 }
 
@@ -2084,7 +2093,7 @@ h6 {
 
 #header.header-scrolled {
     transition: all 0.5s;
-    background-color: rgba(4, 9, 30, 0.2)
+    background-color: rgba(255, 255, 255, 0.95)
 }
 
 #header.header-scrolled .main-menu {
@@ -2115,7 +2124,8 @@ h6 {
 
 #header #logo img {
     padding: 0;
-    margin: 0
+    margin: 0;
+    max-width: 450px;
 }
 
 @media (max-width: 768px) {
@@ -2194,7 +2204,7 @@ h6 {
     display: inline-block;
     color: #d33837;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     text-transform: uppercase;
     outline: none
 }
@@ -2362,7 +2372,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .primary-btn {
-    background: #d33837;
+    /* background: #d33837; */
+    background: rgb(211,56,55);
+    background: linear-gradient(50deg, rgba(211,56,55,1) 0%, rgba(35,97,78,1) 68%);
     line-height: 42px;
     padding-left: 30px;
     padding-right: 30px;
@@ -2375,8 +2387,10 @@ body.mobile-nav-active #mobile-nav-toggle {
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
-    cursor: pointer;
-    position: relative
+    cursor: pointer !important;
+    position: relative;
+    font-family: Cairo;
+    border-radius: .3rem;
 }
 
 .primary-btn:focus {
@@ -2421,15 +2435,34 @@ body.mobile-nav-active #mobile-nav-toggle {
 .primary-btn.white:hover span {
     color: #d33837
 }
+.gr-btn  {
+    border: 2px solid;
+    border-image: linear-gradient(50deg, #d33837, #23614e) 1;
+    line-height: 42px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: inline-block;
+    font-weight: 500;
+    position: relative;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    cursor: pointer !important;
+    position: relative;
+    font-family: Cairo;
+}
 
 .primary-btn.wh {
     background: #fff;
     color: #222;
-    text-transform: uppercase
+    text-transform: uppercase;
+    font-family: Cairo;
+    font-size: 16px;
 }
 
 .primary-btn.wh:hover {
-    background: #222;
+    background: #222 !important;
     color: #fff
 }
 
@@ -2484,12 +2517,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .banner-content h1 {
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 600;
     line-height: 1em;
     margin-top: 10px;
-    color: rgba(0, 0, 0, 0.6)
+    color: rgba(0, 0, 0, 0.7);
 }
+.banner-content p {
+    font-size: 16px;
+}
+
 
 @media (max-width: 991.98px) {
     .banner-content h1 {
@@ -2516,16 +2553,18 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .banner-content .primary-btn {
-    background-color: #d33837;
+    /* background-color: #d33837; */
     color: #fff;
-    font-weight: 600;
-    font-size: 14px
+    /* font-weight: 600; */
+    font-size: 16px;
+    cursor: pointer !important;
 }
 
 .banner-content .primary-btn:hover {
     background-color: #fff;
     color: #d33837;
     border: solid 1PX #d33837;
+    
 }
 
 .feature-area {
@@ -2538,9 +2577,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .single-feature .title {
-    /* background: rgba(7, 120, 165, 0.5); */
-    background: rgba(35, 97, 78, 0.8);
-    padding: 20px 0px;
+    /* background: rgba(211, 56, 55, 1); */
+    background: rgba(35, 97, 78, 0.9);
+    padding: 15px 0px;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
@@ -2550,23 +2589,27 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 
 .single-feature .title h4 {
-    color: #fff
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+
 }
 
 .single-feature .desc-wrap {
     padding: 20px;
     background-color: #fff;
-    box-shadow: 0px 10px 30px 0px rgba(153, 153, 153, 0.1)
+    box-shadow: 0px 10px 30px 0px rgba(153, 153, 153, 0.8);
+    border-radius: .5rem;
 }
 
 .single-feature .desc-wrap a {
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 15px;
+    /* font-weight: 600; */
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
-    color: #222
+    color: #fff
 }
 
 .single-feature:hover {
@@ -3034,8 +3077,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .cta-two-area {
-    background: rgba(35, 97, 78, 0.8);
-    padding: 40px 0px
+    /* background: rgba(35, 97, 78, 0.8); */
+    background: rgb(211,56,55);
+    background: linear-gradient(50deg, rgba(211,56,55,1) 0%, rgba(35,97,78,1) 68%);
+    padding: 35px 0px
 }
 
 .cta-two-area .cta-left {
@@ -4836,6 +4881,10 @@ dl.toggle.time-line:before {
     color: #fff;
     margin-bottom: 25px;
     font-weight: 500
+}
+.single-footer-widget img{
+    max-width: 300px;
+    margin-bottom: 10px;
 }
 
 .single-footer-widget .form-control {
