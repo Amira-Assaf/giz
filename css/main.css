@@ -2497,11 +2497,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 .section-title h1 {
     margin-bottom: 10px
 }
-
 .banner-area {
     background: url(../img/map.png) right;
     background-size: cover
 }
+
+.map-bg {
+    background: url(../img/map.png) right;
+    background-size: cover
+}
+
 
 .banner-area .overlay-bg {
     background-color: rgba(35, 97, 78, 0.8)
@@ -3115,7 +3120,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .about-content {
-    margin-top: 50px;
+    margin-top: 100px;
     padding: 90px 0px;
     text-align: left
 }
@@ -3133,7 +3138,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .about-content a {
-    color: #fff;
+    color: #23614e;
     font-weight: 300;
     font-size: 16px 
 }
@@ -4126,7 +4131,9 @@ dl.toggle.time-line:before {
 .post-content-area .single-post .excert {
     margin-bottom: 20px
 }
-
+.post-content-area .single-post p {
+    font-size: 14px;
+}
 .post-content-area .single-post .primary-btn {
     background: #d33837!important;
     color: #ddd !important;
@@ -4362,9 +4369,12 @@ dl.toggle.time-line:before {
     background: rgba(35, 97, 78, 0.8);
     color: #fff;
     text-align: center;
-    padding: 12px 0px
+    padding: 12px 0px;
+    font-weight: 400 !important;
 }
-
+.widget-wrap .post-category-widget .cat-list{
+    width: 100%;
+}
 .widget-wrap .post-category-widget .cat-list li {
     padding-top: 15px;
     padding-bottom: 8px;
@@ -4504,7 +4514,21 @@ dl.toggle.time-line:before {
     font-size: 12px;
     color: #222
 }
-
+.single-post .footer-bottom{
+padding: 20px 0 ;
+}
+.single-post .footer-social {
+    text-align: left !important;
+    padding-left: 0;
+}
+.single-post .footer-social a{
+    color: #d33837 !important;
+    background-color: #fff !important;
+}
+.single-post .footer-social a:hover{
+    color: #fff !important;
+    background-color: #d33837 !important;
+}
 .single-post-area {
     padding-top: 80px;
     padding-bottom: 80px
@@ -5089,4 +5113,10 @@ dl.toggle.time-line:before {
     -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.55);
     -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.55);
     border-radius: .4rem;
+}
+.txt-teal{
+    color: #23614e !important;
+}
+.txt-red{
+    color: #d33837 !important;
 }
